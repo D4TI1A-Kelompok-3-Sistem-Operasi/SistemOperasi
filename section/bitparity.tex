@@ -13,10 +13,6 @@ Perubahan nilai dapat terjadi karena pengaruh noise atau sinyal liar.
 Perubahan nilai : 0 $\,\to\,$ 1 atau 1 $\,\to\,$ 0
 \newline Contoh :
 
-\section{pengertian bit parity}
-Bit parity merupakan bit tambahan yang disisipkan pada urutan bit bit data yang di transmisikan. 
-Bit parity adalah bilangan biner yang di tambahkan untuk meyakinkan bahwa jumlah bit yang dikirimkan mempunyai angka satu yang selalu genap atau ganjil.
-
 \begin{table}[h!]
 \centering
 \begin{tabular}{ c c c }
@@ -34,3 +30,8 @@ Tx &  & Rx \\
 
 Proses perubahan nilainya bisa dilihat pada gambar \ref{perubahan_nilai_bit_parity}
 
+\section{Cara Kerja Bit Parity}
+\subsection{Konsep Umum}
+Pihak pengirim akan menambahkan 1 bit tambahan (Bit Parity) pada data, untuk menggabarkan karakteristik dari data tersebut. Nilai dari bit parity (1 atau 0) tidak diperbolehkan secara sembarang. Dalam proses pentransmisiannya data tadi dikirim bersamaan (data dan bit parity-nya). Pada terminal penerimaan data kita dibaca dan di dekodisasi dengan cara yang sama seperti saat menentukan nilai bit parity disisi pengirim. Lalu hasil dekodisasi tadi dibandingkan dengan bit parity yang dibawakan oleh pengirim.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% KADEK DIVA KRISHNA MURTI %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
