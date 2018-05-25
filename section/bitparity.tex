@@ -44,6 +44,13 @@ Apabila hasil pembacaan (dekodisasi) data terkirim sama dengan bit Paritynya mak
 \subsection{Menentukan Nilai Bit Parity}
 Penentuan nilai bit Parity (1 atau 0) dilakukan dengan meng-XOR kan semua bit yang ada pada data sepasang-sepasang, hasil akhir dari peng-XOR an seluruh bit ini yang akan dijadikan acuan untuk menentukan nilai dari bit Parity yang akan ditambahkan. Jadi belum tentu hasil XOR langsung dijadikan sebagai nilai dari bit Parity.
 
+Skema XOR
+ Bit 0 adalah bit pertama begitu seterusnya. Setelah kita hasil dari XOR barulah kita akan menentukan nilai dari bit Parity data kita. Ada bit Parity ganjil dan Parity genap, Parity genap maka hasi XOR itu adalah nilai bit Parity, jika Parity ganjil maka nilai bit Parity merupakan nilai komplement (kebalikan) dari hasil XOR.
+
+Contoh cara kerja bit Parity
+Ada 2 orang sedang melakukan chatting, keduanya melakukan percakapan. Metode Pendeteksi Error menggunakan Bit Parity.
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% KADEK DIVA KRISHNA MURTI %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
