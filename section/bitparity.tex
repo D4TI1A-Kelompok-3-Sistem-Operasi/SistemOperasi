@@ -12,20 +12,6 @@ Tujuan pemberian bit parity ini adalah untuk memastikan bahwa bit - bit yang dit
 Perubahan nilai dapat terjadi karena pengaruh noise atau sinyal liar.
 Perubahan nilai : 0 $\,\to\,$ 1 atau 1 $\,\to\,$ 0
 
-\section{ pengertian parity generator}
-Parity generator adalah alat pembangkit parity
-Sebuah rangkaian umtuk membangkitkan/ membuat bit parity
-Bit parity di bangkitkan dari urutan data yang terdiri dari sejumlah bit biner
-Bit parity di buat sebelum data di transmisikan karena itu parity generator letaknya di transmitter
-
-
-
-
-\section{jenis jenis bit parity}
-Jenis bit parity terbagi menjadi dua bagian yaitu sebagai berikut :
-1.odd parity (parity ganjil) jika jumlah bit satu dan bit paritynya adalah ganjil.
-2.even parity(parity genap)jika jumlah bit satu dan jumlah bit parity lainnya adalah genap.
-
 \newline Contoh :
 
 \begin{table}[h!]
@@ -59,6 +45,19 @@ Skema XOR
 Contoh cara kerja bit Parity
 Ada 2 orang sedang melakukan chatting, keduanya melakukan percakapan. Metode Pendeteksi Error menggunakan Bit Parity.
 
+Orang pertama mengirim kata “Aku” ke orang kedua.
+Dalam kode ASCII berarti =
+A = 1000001
+k = 1101011
+u = 1010111
+Dalam terminal pengirim kata “Aku” dianalisa perkarakter “A” lalu “k” lalu “u”  dari masing masing huruf diberikan bit Paritynya (menggunakan Even Parity bit/ Parity Genap) . Maka data akan berubah menjadi :
+
+A = 10000010
+k = 11010111
+u = 10101111
+Data lalu dikirim dengan format: 10101111_11010111_10000010
+
+Karena terjadi suatu hal seperti distorsi atau noise-noise lainnya, bit-bit tadi ada yang berubah dalam perjalannya menjadi :
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% KADEK DIVA KRISHNA MURTI %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
