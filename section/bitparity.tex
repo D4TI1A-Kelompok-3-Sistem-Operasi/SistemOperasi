@@ -1,4 +1,4 @@
-% Nama Kelompok : Kelompok 3
+﻿% Nama Kelompok : Kelompok 3
 % Kelas : D4 TI 1A
 % 1. Kadek Diva Krishna Murti (1174006)
 % 2. Niko
@@ -11,6 +11,8 @@ Bit Parity merupakan bit tambahan yang disisipkan pada urutan bit-bit data yang 
 Tujuan pemberian bit parity ini adalah untuk memastikan bahwa bit - bit yang ditransmisikan tidak mengalami perubahan nilai setelah sampai di penerima.
 Perubahan nilai dapat terjadi karena pengaruh noise atau sinyal liar.
 Perubahan nilai : 0 $\,\to\,$ 1 atau 1 $\,\to\,$ 0
+
+
 
 \newline Contoh :
 
@@ -105,9 +107,18 @@ Bit paritas di set menjadi 1 apabila jumlah angka 1 dalam kesatuan tersebut (tif
 \subsection{Teknik Pendeteksian Kesalahan}
 Pendeteksian dan pembetulan kesalahan sering digunakan pada komunikasi data untuk mengatasi adanya korupsi dan atau informasi yang hilang dari isyarat data yang datang pada sisi penerima. Dalam pendeteksian kesalahan yang paling sederhana, bit paritas ditambahkan pada akhir setiap karakter ASCII 8 bit. Bit paritas menggunakan cacah 1 untuk setiap karakter yang bitnya berjumlah ganjil, disebut sebagai paritas ganjil contoh karakter 1010001, sedang bit paritas yang menggunakan cacah 0 untuk setiap karakter yang bitnya berjumlah genap. Satu Byte (karakter) terdiri dari 8 bit, setiap bit mempunyai nilai 0 atau 1 tergantung dari standar karakternya.
 
+Bit paritas membuat penerima mampu mendeteksi, adanya kesalahan tunggal pada setiap karakter yang dikirimkan. Pada sistem yang sangat sederhana, terminal pengirim harus memberitahu apabila ada kesalahan pada karakter yang diterima oleh terminal penerima. Untuk memungkinkan hal itu, data dipecah menjadi sejumlah blok dan setiap blok mempunyai beberapa karakter pemeriksa yang ditambahkan. Penerima akan mengkomputasi ulang karakter-karakter pemeriksa ini untuk menentukan apakah ada kesalahan atau tidak.
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% NICO EKKLESIA SEMBIRING %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Sejarah Bit Parity}
 Sebuah "paritas track" hadir pada penyimpanan data pita magnetik pertama pada tahun 1951. Paritas dalam bentuk ini, diterapkan di beberapa sinyal paralel, dikenal sebagai cek redundansi transversal. Ini dapat dikombinasikan dengan paritas yang dikomputasi melalui beberapa bit yang dikirim pada sinyal tunggal, pemeriksaan redundansi longitudinal. Dalam bus paralel, ada satu bit cek redundansi longitudinal per sinyal paralel.
 Paritas juga digunakan setidaknya pada beberapa sistem pemasukan pita kertas (tape berlubang) (yang mendahului sistem pita magnetik). Pada sistem yang dijual oleh perusahaan Inggris ICL (sebelumnya ICT), pita kertas berukuran 1 inci (25 mm) memiliki 8 posisi lubang yang melintang di atasnya, dengan posisi ke 8 untuk paritas. 7 posisi digunakan untuk data, misalnya, 7-bit ASCII. Posisi 8 memiliki lubang yang dilubangi tergantung pada jumlah lubang data yang dilubangi.
+
+\section{pengertian bit parity checker}
+Parity checker adalah alat pemeriksa parity
+Sebuah rangkaian untuk mengecek urutan bit bit data dan bit parity( yang di bangkitan  oleh parity generator)setelah di transmisikan
+Parity checker menghasilkan nilai nol atau satu yang menunjukan indikasi kesalahan bit saat di terima
+Apabila nilai indicator  kesalahan adalah 1 maka bit yang di terima salah dan apabila nol maka bit bit yang di terima benar
