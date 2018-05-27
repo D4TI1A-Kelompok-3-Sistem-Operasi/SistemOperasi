@@ -60,6 +60,22 @@ Data lalu dikirim dengan format: 10101111_11010111_10000010
 Karena terjadi suatu hal seperti distorsi atau noise-noise lainnya, bit-bit tadi ada yang berubah dalam perjalannya menjadi :
 
 
+A = 10000010
+k = 11010111
+u = 10101111
+Data lalu dikirim dengan format: 10101111_11010111_10000010
+
+Karena terjadi suatu hal seperti distorsi atau noise-noise lainnya, bit-bit tadi ada yang berubah dalam perjalannya menjadi :
+10101111_11010111_11000010
+Pada sis penerima data tersebut terbaca”Cku” bukan “Aku”, bila tanpa metode deteksi Error maka data tersebut dianggap valid dan penerima mendapat kesusahan dalam membacanya.
+Mekanisme Pembacaannya :
+-          Deret bit 1100001 di dekondisasi sehingga menghasilkan bit “1”(tanpa bit Parity)
+-          Penerima membandingkan hasil dekondisasi dengan bit Paritynya, “1” dan “0”, karena tidak sama maka terjadi error
+-          Penerima meminta data dikirim ulang
+-          Proses diulang sampai data dianggap benar
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% KADEK DIVA KRISHNA MURTI %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Kelebihan dan Kekurangan Bit Parity}
