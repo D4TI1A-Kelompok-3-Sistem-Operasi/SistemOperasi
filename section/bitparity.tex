@@ -82,34 +82,31 @@ Mekanisme Pembacaannya :
 
 \section{Kelebihan dan Kekurangan Bit Parity}
 \subsection{Kelebihan Bit Parity}
--   Lebih cepat karena berbasis 2 (biner)
+-	Lebih cepat karena berbasis 2 (biner)
 -   Mudah dalam pengecekan
 -   Sederhana dalam analisis dan penggunaan pada sistem
 -   Mudah direalisasikan dalam bentuk rangkaian atau hardware
 
 \subsection{Kekurangan Bit Parity}
 -   Kurang handal dalam mengatasi deteksi dan perbaikan error
--   Kemungkinan kesalan yang terjadi besar, yaitu 50%
--   Belum dapat mengakomodir file dengan ukuran besar
+-   Kemungkinan kesalan yang terjadi besar, yaitu 50 persen
+-   Belum dapat melakukan proses pada file dengan ukuran besar
 -   Tidak dapat mendeteksi kesalahan dalam jumlah genap
 
 
 
 \section{Pembagian Jenis Bit Parity}
 \subsection{Parity Ganjil}
-Bit Paritas di set menjadi 1 apabila jumlah angka 1 dalam kesatuan bit tersebut (tidak termasuk bit paritas) adalah genap, sehingga menjadikan jumlah bit dalam kesatuan tersebut (termasuk bit paritas) menjadi ganjil.
+Bit Parity akan mengalami perubahan menjadi 1 bila jumlah angka 1  yang ada dalam kesatuan bit tersebut adalah genap, sehingga akan menjadikan jumlah bit dalam kesatuan tersebut menjadi ganjil.
  
 \subsection{Parity Genap}
-Bit paritas di set menjadi 1 apabila jumlah angka 1 dalam kesatuan tersebut (tifak termasuk bit paritas) adalah ganjil, sehingga menjadikan jumlah bit dalam kesatuan tersebut (termasuk bit paritas) menjadi genap.
-
+Bit parity akan mengalami perubahan  menjadi 1 bila jumlah angka 1 yang ada dalam kesatuan tersebut adalah ganjil, sehingga akan menjadikan jumlah bit dalam kesatuan tersebut menjadi genap.
 
 \section{Teknik Pendeteksian Kesalahan}
 \subsection{Teknik Pendeteksian Kesalahan}
 Pendeteksian dan pembetulan kesalahan sering digunakan pada komunikasi data untuk mengatasi adanya korupsi dan atau informasi yang hilang dari isyarat data yang datang pada sisi penerima. Dalam pendeteksian kesalahan yang paling sederhana, bit paritas ditambahkan pada akhir setiap karakter ASCII 8 bit. Bit paritas menggunakan cacah 1 untuk setiap karakter yang bitnya berjumlah ganjil, disebut sebagai paritas ganjil contoh karakter 1010001, sedang bit paritas yang menggunakan cacah 0 untuk setiap karakter yang bitnya berjumlah genap. Satu Byte (karakter) terdiri dari 8 bit, setiap bit mempunyai nilai 0 atau 1 tergantung dari standar karakternya.
 
-Bit paritas membuat penerima mampu mendeteksi, adanya kesalahan tunggal pada setiap karakter yang dikirimkan. Pada sistem yang sangat sederhana, terminal pengirim harus memberitahu apabila ada kesalahan pada karakter yang diterima oleh terminal penerima. Untuk memungkinkan hal itu, data dipecah menjadi sejumlah blok dan setiap blok mempunyai beberapa karakter pemeriksa yang ditambahkan. Penerima akan mengkomputasi ulang karakter-karakter pemeriksa ini untuk menentukan apakah ada kesalahan atau tidak. Jika tidak ada
-kesalahan, penerima akan mengirimkan karakter ACK ke terminal pengirim, dan blok berikutnya akan dikirim oleh pengirim. Jika penerima mendeteksi adanya kesalahan, penerima akan mengirimkan karakter NAK dan pengirim harus mengirimkan ulang blok yang mengandung kesalahan tersebut. Hal ini disebut dengan sistem Automatic Repeat Request (ARQ) dan diguna-kan bersama-sama dengan protokol-protokol yang berorientasi bit seperti BiSynch
-
+Bit paritas membuat penerima mampu mendeteksi, adanya kesalahan tunggal pada setiap karakter yang dikirimkan. Pada sistem yang sangat sederhana, terminal pengirim harus memberitahu bila terdapat kesalahan pada karakter yang diterima oleh terminal penerima. Untuk memungkinkan hal itu, data akan dipecah menjadi sejumlah blok dan setiap blok mempunyai beberapa karakter pemeriksa yang ditambahkan. Penerima akan mengkomputasi ulang karakter-karakter pemeriksa ini untuk menentukan apakah ada kesalahan atau tidak. Jika tidak ada kesalahan, penerima akan mengirimkan karakter ACK ke terminal pengirim, dan blok berikutnya akan dikirim oleh pengirim. Jika penerima mendeteksi adanya suatu kesalahan, maka penerima akan mengirim karakter NAK,  dan pengirim harus mengirimkan ulang blok yang mengandung kesalahan tersebut. Hal ini biasa disebut dengan sistem Automatic Repeat Request (ARQ) dan digunakan secara bersama-sama dengan protokol yang berorientasi bit seperti BiSynch
 
 
 
