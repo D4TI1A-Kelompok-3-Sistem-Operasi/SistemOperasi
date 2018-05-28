@@ -122,3 +122,6 @@ Parity checker adalah alat pemeriksa parity
 Sebuah rangkaian untuk mengecek urutan bit bit data dan bit parity( yang di bangkitan  oleh parity generator)setelah di transmisikan
 Parity checker menghasilkan nilai nol atau satu yang menunjukan indikasi kesalahan bit saat di terima
 Apabila nilai indicator  kesalahan adalah 1 maka bit yang di terima salah dan apabila nol maka bit bit yang di terima benar
+
+\section{pengertianbit parity}
+Jika jumlah bit ganjil(termasuk bit parity)berubah pada waktu transmisi maka bit parity menjadi tidak benar dan mengindikasikan adanya kesalahan pada waktu pengiriman. Oleh karena itu bit parity merupakan kode pendeksi kesalahan dan bukan merupakan kode pengoreksi kesalahan karena tidak ada cara untuk menentukan bit yang mana keliru.Data harus diabaikan seluruhnya dan mengulangi lagi transmisi dari awal. Pada media transmisi yang terganggu, transmisi yang berhasil akan membutuhkan banyak waktu atau tidak berhasil sama sekali. Parity mempunyai keuntungan yaitu hanya menggunakan satu bit saja dan membutuhkan satu saja gerbang XOR untuk men-generate nya.
