@@ -1,7 +1,7 @@
 ﻿% Nama Kelompok : Kelompok 3
 % Kelas : D4 TI 1A
 % 1. Kadek Diva Krishna Murti (1174006)
-% 2. Niko
+% 2. Niko Eklesia
 % 3. Rizal Rony Sitorus
 % 4. Jeremia Wahyudi Sianturi (1174029)
 % 5. Sri Rahayu (1174015)
@@ -11,7 +11,7 @@ Sebuah "paritas track" hadir pada penyimpanan data pita magnetik pertama pada ta
 
 
 \section{Pengertian Bit Parity}
-Bit Parity merupakan bit tambahan yang disisipkan pada urutan bit-bit data yang ditransmisikan. Tujuan pemberian bit parity ini adalah untuk memastikan bahwa bit - bit yang ditransmisikan tidak mengalami perubahan nilai setelah sampai di penerima. Perubahan nilai dapat terjadi karena pengaruh noise atau sinyal liar.
+Bit Parity merupakan bit tambahan yang disisipkan pada urutan bit-bit data yang ditransmisikan. Adapun tujuan dari pemberian bit parity ini yaitu untuk memastikan bit - bit yang ditransmisikan tidak mengalami perubahan nilai setelah sampai ke penerima. Perubahan nilai tersebut dapat terjadi karena pengaruh noise atau sinyal liar.
 Perubahan nilai tersebut, seperti 0 $\,\to\,$ 1 atau 1 $\,\to\,$ 0
 
 Contoh :
@@ -35,8 +35,8 @@ Proses perubahan nilainya bisa dilihat pada gambar \ref{perubahan_nilai_bit_pari
 
 Parity-bit diperoleh dengan menghitung satuan data yang akan dikirim sehingga dengan menghitung kembali parity-bit pihak penerima data dapat memperkirakan data yang diterima rusak atau tidak.
 
-\section{Jenis – jenis Bit Parity}
-Berdasarkan jurnal yang berjudul “Perangkat Komunikasi Multi - External Hardware Melalui LAN Dengan Menggunakan Microcontroller” oleh Marojahan M.T. Sigiro \cite{ sigiro2013perangkat} menyatakan terdapat beberapa macam parity yang ada dalam proses pengiriman data, yaitu sebagai berikut : 
+\section{Jenis - Jenis Bit Parity}
+Berdasarkan jurnal yang berjudul “Perangkat Komunikasi Multi - External Hardware Melalui LAN Dengan Menggunakan Microcontroller” oleh Marojahan M.T. Sigiro \cite{sigiro2013perangkat} menyatakan terdapat beberapa macam parity yang ada dalam proses pengiriman data, yaitu sebagai berikut : 
 \begin{enumerate}
 \item Even parity, bernilai 0 jika bit 1 yang dikirim berjumlah genap dan bernilai 1 jika bit 1 yang dikirim berjumlah ganjil. 
 \item Odd parity, bernilai 0 jika bit 1 yang dikirim berjumlah ganjil dan bernilai 1 jika bit 1 yang dikirim berjumlah genap. 
@@ -109,18 +109,17 @@ A & B & C & P\\
 \end{tabular}
 \end{table}
 
-\subsection{Parity Generator}
+\subsubsection{Parity Generator}
 
-Sebuah rangkaian untuk membangkitkan atau membuat bit parity. Bit Parity dibangkitkan dari urutan data yang terdiri dari sejumlah bit biner. Bit Parity dibuat sebelum data ditransmisikan, karena itu Parity Generator letaknya di Transmitter.
+Parity generator merupakan sebuah rangkaian untuk membangkitkan atau membuat bit parity. Bit Parity dibangkitkan dari urutan data yang terdiri dari sejumlah bit biner. Bit Parity dibuat sebelum data ditransmisikan, karena itu Parity Generator letaknya di Transmitter.
 
-\subsection{Parity Checker}
+\subsubsection{Parity Checker}
 
-Sebuah rangkaian untuk mengecek urutan bit – bit data dan bit parity (yang dibangkitkan oleh Parity Generator) setelah ditransmisikan. Parity Checker menghasilkan nilai “0” atau “1” yang menunjukkan indikasi kesalahan bit saat diterima. Apabila Nilai Indikator Kesalahan adalah “1” maka bit yang diterima salah, dan apabila “0” maka bit-bit yang diterima benar. Parity checker berada di sisi receiver.
+Parity checker merupakan sebuah rangkaian untuk mengecek urutan bit - bit data dan bit parity (yang telah dibangkitkan oleh Parity Generator) setelah ditransmisikan. Parity Checker menghasilkan nilai "0" atau "1" yang menunjukkan indikasi kesalahan bit saat diterima. Apabila Nilai Indikator Kesalahan adalah "1" maka bit yang diterima salah, dan apabila "0" maka bit-bit yang diterima benar. Parity checker berada di sisi receiver.
 
 \section{Cara Kerja Bit Parity}
 \subsection{Konsep Umum}
-Pihak pengirim akan menambahkan 1 bit tambahan (Bit Parity) pada data, untuk menggabarkan karakteristik dari data tersebut. Nilai dari bit parity (1 atau 0) tidak diperbolehkan secara sembarang. Dalam proses pentransmisiannya data tadi dikirim bersamaan (data dan bit parity-nya). Pada terminal penerimaan data kita dibaca dan di dekodisasi dengan cara yang sama seperti saat menentukan nilai bit parity disisi pengirim. Lalu hasil dekodisasi tadi dibandingkan dengan bit parity yang dibawakan oleh pengirim.
-Apabila hasil pembacaan (dekodisasi) data terkirim sama dengan bit Paritynya maka data tersebut dapat dianggap benar. Dan apabila diperoleh perbedaan nilai antara hasil dekodisasi dengan bit Paritynya maka data dapat di klasifikasi sebagai data yang error. Terminal penerima akan mengirim request pada terminal pengirim untuk mengirim ulang data yang error.
+Pihak pengirim akan menambahkan 1 bit tambahan (Bit Parity) pada data, untuk menggabarkan karakteristik dari data tersebut. Nilai dari bit parity (1 atau 0) tidak diperbolehkan secara sembarang. Dalam proses pentransmisiannya data tadi dikirim bersamaan (data dan bit parity-nya). Pada terminal penerimaan data kita dibaca dan di dekodisasi dengan cara yang sama seperti saat menentukan nilai bit parity disisi pengirim. Lalu hasil dekodisasi tersebut dibandingkan dengan bit - bit parity yang dikirim oleh pengirim. Apabila hasil pembacaan (dekodisasi) data terkirim sama dengan bit paritynya maka data tersebut dapat dianggap benar dan apabila diperoleh perbedaan nilai antara hasil dekodisasi dengan bit paritynya maka data dapat diklasifikasi sebagai data yang error. Terminal penerima akan mengirim permintaa pada terminal pengirim untuk mengirim ulang data yang error.
  
 \subsection{Menentukan Nilai Bit Parity}
 Penentuan nilai bit Parity (1 atau 0) dilakukan dengan meng-XOR kan semua bit yang ada pada data sepasang-sepasang, hasil akhir dari peng-XOR an seluruh bit ini yang akan dijadikan acuan untuk menentukan nilai dari bit Parity yang akan ditambahkan. Jadi belum tentu hasil XOR langsung dijadikan sebagai nilai dari bit Parity. Contohnya dapat dilihat pada gambar \ref{ilustrasixorgate}
@@ -138,7 +137,7 @@ Misal data yang berupa 1 karakter adalah huruf  "M", yang menurut ASCII sama den
 1 XOR 0 = 1\\
 1 XOR 0 = 1\\
 1 XOR 1 = 0\\
-Jika bit 1 pada data berjumlah genap maka keluaran akhirnya "0", dan jika ganjil maka "1"
+Jika bit 1 pada data berjumlah ganjil maka keluaran akhirnya adalah "1", dan jika genap maka keluaran akhirnya adalah "0". 
 
 %%%%%%%
 
@@ -162,7 +161,7 @@ Karena terjadi suatu hal seperti distorsi atau noise-noise lainnya, bit-bit tadi
 Pada sis penerima data tersebut terbaca "Cku" bukan "Aku", bila tanpa metode deteksi Error maka data tersebut dianggap valid dan penerima mendapat kesusahan dalam membacanya.\\ \\
 Mekanisme Pembacaannya :
 \begin{itemize}
-\item Deret bit 1100001 di dekondisasi sehingga menghasilkan bit “1”(tanpa bit Parity)
+\item Bit 1100001 didekondisasikan dan akan menghasilkan bit "1"
 \item Penerima membandingkan hasil dekondisasi dengan bit Paritynya, “1” dan “0”, karena tidak sama maka terjadi error
 \item Penerima meminta data dikirim ulang
 \item Proses diulang sampai data dianggap benar
